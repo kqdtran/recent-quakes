@@ -39,3 +39,4 @@ nosetests.xml
 
 # Project-specific
 stat157.cfg
+quakes.dict
