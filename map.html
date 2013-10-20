@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<head>
+   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.css" />
+   <script src="http://cdn.leafletjs.com/leaflet-0.5/leaflet.js"></script>
+   
+   
+   
+   
+
+
+<style>
+
+#map {
+  position:absolute;
+  top:0;
+  bottom:0;
+  right:0;
+  left:0;
+}
+
+</style>
+</head>
+<body>
+
+        <div id="map" style="width: 3286px; height: 1080px"></div>
+
+<script>
+
+
+
+var map = L.map('map').setView([37.8717443, -122.2609626], 3);
+
+L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 18,
+    attribution: 'Map data (c) <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+
+var circle_1 = L.circle([26.2676, -110.1778], 162500.0, {
+                            color: '#4DCEC4',
+                            fillColor: '#4DCEC4',
+                            fillOpacity: 0.6
+                            });
+circle_1.bindPopup("75km SW of Etchoropo, Mexico");
+map.addLayer(circle_1)
+
+var circle_2 = L.circle([-6.4873, 154.928], 170000.0, {
+                            color: '#A9EF7B',
+                            fillColor: '#A9EF7B',
+                            fillOpacity: 0.6
+                            });
+circle_2.bindPopup("64km WSW of Panguna, Papua New Guinea");
+map.addLayer(circle_2)
+
+var circle_3 = L.circle([9.8662, 124.0115], 177500.0, {
+                            color: '#BF7910',
+                            fillColor: '#BF7910',
+                            fillOpacity: 0.6
+                            });
+circle_3.bindPopup("2km NE of Catigbian, Philippines");
+map.addLayer(circle_3)
+
+var circle_4 = L.circle([35.4866, 23.2605], 160000.0, {
+                            color: '#B8ADE6',
+                            fillColor: '#B8ADE6',
+                            fillOpacity: 0.6
+                            });
+circle_4.bindPopup("30km W of Platanos, Greece");
+map.addLayer(circle_4)
+
+var circle_5 = L.circle([10.8768, -62.278], 152500.0, {
+                            color: '#545C9A',
+                            fillColor: '#545C9A',
+                            fillOpacity: 0.6
+                            });
+circle_5.bindPopup("33km N of Gueiria, Venezuela");
+map.addLayer(circle_5)
+
+var circle_6 = L.circle([40.9835, -124.7498], 122500.0, {
+                            color: '#1F4EE8',
+                            fillColor: '#1F4EE8',
+                            fillOpacity: 0.6
+                            });
+circle_6.bindPopup("52km WNW of Eureka, California");
+map.addLayer(circle_6)
+
+var circle_7 = L.circle([-30.7519, -178.4388], 157500.0, {
+                            color: '#59F73D',
+                            fillColor: '#59F73D',
+                            fillOpacity: 0.6
+                            });
+circle_7.bindPopup("87km NNE of L'Esperance Rock, New Zealand");
+map.addLayer(circle_7)
+
+var circle_8 = L.circle([-38.6016, 78.38], 160000.0, {
+                            color: '#85EFD4',
+                            fillColor: '#85EFD4',
+                            fillOpacity: 0.6
+                            });
+circle_8.bindPopup("113km SE of Amsterdam Island, ");
+map.addLayer(circle_8)
+
+var circle_9 = L.circle([53.1734, 152.7664], 167500.0, {
+                            color: '#41B2AF',
+                            fillColor: '#41B2AF',
+                            fillOpacity: 0.6
+                            });
+circle_9.bindPopup("Sea of Okhotsk");
+map.addLayer(circle_9)
+
+var circle_10 = L.circle([-30.8801, -178.3782], 162500.0, {
+                            color: '#FC449B',
+                            fillColor: '#FC449B',
+                            fillOpacity: 0.6
+                            });
+circle_10.bindPopup("78km NE of L'Esperance Rock, New Zealand");
+map.addLayer(circle_10)
+
+var circle_11 = L.circle([27.1761, 65.5043], 170000.0, {
+                            color: '#E9FF76',
+                            fillColor: '#E9FF76',
+                            fillOpacity: 0.6
+                            });
+circle_11.bindPopup("84km NNE of Awaran, Pakistan");
+map.addLayer(circle_11)
+
+var circle_12 = L.circle([-15.8389, -74.5094], 177500.0, {
+                            color: '#D889D9',
+                            fillColor: '#D889D9',
+                            fillOpacity: 0.6
+                            });
+circle_12.bindPopup("46km SSE of Acari, Peru");
+map.addLayer(circle_12)
+
+var circle_13 = L.circle([26.9708, 65.5198], 192500.0, {
+                            color: '#396521',
+                            fillColor: '#396521',
+                            fillOpacity: 0.6
+                            });
+circle_13.bindPopup("63km NNE of Awaran, Pakistan");
+map.addLayer(circle_13)
+
+
+
+
+
+
+</script>
+
+</body>
