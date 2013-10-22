@@ -67,6 +67,9 @@ ipython notebook --ip=0.0.0.0 --no-browser --pylab=inline
 ```
 Click on "Recent Earthquakes" for information on how to read the information from the .csv file downloaded from the USGS webpage.
 Click on "dugtrio" and follow instructions on the page for how to turn the data from the USGS webpage into a neat data frame
+The code for "dugtrio" can be found here: https://github.com/kqdtran/recent-quakes/blob/master/dugtrio.ipynb. The code should produce
+a map with coordinates for the data that you have imported and updated.
+
 For more information on JSON and pickle and the advantages of each, follow this link: http://pymotw.com/2/json/
 For more information on pandas click here: http://pandas.pydata.org/pandas-docs/dev/io.html
 
