@@ -1,14 +1,12 @@
-Due Date
---------
-Monday, October 21st, 2013 (2013-10-21) at 11:59pm. On Tuesday Oct
-22nd in class we will **not** have a formal presentation. Instead we
-will conduct a code review together.
+Stat 157 Project 2 - Earthquake Location Visualization
+======================================================
 
-Questions or Problems?
-----------------------
-Open an item in the Github issue tracker of this repository:
-
-https://github.com/stat157/recent-quakes/issues
+Introduction
+------------
+* Team: **David Barrera**, **Christina Ho**, **Roland Shen**, **Khoa Tran**
+* Update code to produce same output as old code on earthquake website and parameterize 
+  the function so that for any list of earthquakes in a particular region (i.e. California) 
+  it will generate a map showing the correct location.
 
 Preliminary Setup Steps
 -----------------------
@@ -20,35 +18,21 @@ inside your virtual machine:
 Then run the notebook from your machine with this command:
 
     ipython notebook --no-browser --ip=0.0.0.0 --script --pylab=inline
+    
+    
+Installation & Dependencies
+---------------------------
+
+```bash
+sudo apt-get install python-dev    
+sudo apt-get install python-matplotlib    
+pip install pandas    
+pip install folium
+```
 
 
-Objective
----------
-
-The first objective of this assignment is to improve the data handling
-of the code by upgrading from the deprecated data source to the new
-data source which uses a different data format called
-[JSON](http://en.wikipedia.org/wiki/JSON).
-
-Since we are working with live data we also need to cache the data so
-that we can reliably re-run the code using the same data (or
-optionally with the live data).
-
-The second objective is that we would like to be able to see data for
-earthquakes in states other than Alaska, so the next part of the
-assignment requires
-[refactoring](http://en.wikipedia.org/wiki/Code_refactoring) the code
-to parameterize the function definition instead of relying on the
-hard-coded values for latitude and longitude of the bounding box
-around the region of interest.
-
-This assignment features two main roles: the Data Curator and the
-Visualizer. All 4 members of your vertical group should work together
-no matter what individual roles you have assigned.
-
-Your task
----------
-
+Instructions
+------------    
 1) Data Curation
 
 The USGS [eqa7day-M1.txt data
@@ -74,41 +58,16 @@ You should use the [pandas JSON
 parser](http://pandas.pydata.org/pandas-docs/dev/io.html) to read the
 data instead of the `read_csv` function in the original code.
 
-You will also need to find a way to cache the data locally so that
-your runs are exactly reproducible since the live data gets updated in
-real-time. You should write a program which can use the live data, but
-also optionally can store data from previous runs so that we can
-re-run the program in either mode using *cached data* or *live data*.
+Start Virtualbox, or do `vagrant up`. Then, execute
 
-Start simple, keep the data isolated/separate from the source code,
-and remember that the goal is to make it reproducible by someone else.
+```bash
+git clone https://github.com/kqdtran/recent-quakes    
+cd recent-quakes    
+ipython notebook --ip=0.0.0.0 --no-browser --pylab=inline
+```
+Click on "Recent Earthquakes" for information on how to read the information from the .csv file downloaded from the USGS webpage.
+Click on "dugtrio" and follow instructions on the page for how to turn the data from the USGS webpage into a neat data frame
 
-**The duty of the Data Curator is to write a new version of the code
-that reproduces the same output as the old version of the code, but
-using the new data source.** Note, it may *not* be possible to do that
-exactly if the new data and the old data are substantially different,
-but hopefully they are exact in content, and differ only in format
-(CSV vs JSON).
 
-2) Visualization
 
-The definition of `plot_ak()` has a *very bad code smell*! What if we
-want to plot the earthquakes in California where I live now instead of
-in my home state of Alaska? Can you spot the *code smell*? How can you
-fix it so that given any arbitrary list of earthquakes you can plot
-the bounding box around the location (e.g. the whole state) where the
-quakes occured?
 
-**The duty of the Visualizer is to refactor the hard-coded values out
-of the program and instead parameterize the function so that for any
-list of earthquakes in a particular region (i.e. California) it will
-generate a map showing the correct location.** Instead of including
-the lat/lon bounding box values in the body of the program you might
-consider storing that data in some format on disk and read it back
-into the program as a dataframe to pass to the function as a
-parameter.
-
-Also plot the quakes so we can see the magnitude and depth of each dot
-instead of the way they are plotted now which only shows the location;
-all the dots are the same color and the same size, but could be varied
-to represent more information in the same amount of space.
