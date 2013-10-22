@@ -22,7 +22,13 @@ sudo apt-get install python-dev
 pip install pandas
 ```
 
-You will also need to install Folium for viewing the plots locally: `pip install folium`. Then, run
+You will also need to install requests, jinja2, and Folium for viewing the plots locally: 
+
+```bash
+pip install folium requests jinja2
+```
+
+Then, execute
 
 ```bash
 git clone https://github.com/kqdtran/recent-quakes    
@@ -59,5 +65,5 @@ Access](http://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php).
 You should use the [pandas JSON parser](http://pandas.pydata.org/pandas-docs/dev/io.html) to read the
 data instead of the `read_csv` function in the original code.
 
-For more information on JSON and pickle and the advantages of each, follow this link: http://pymotw.com/2/json/
-For more information on pandas click here: http://pandas.pydata.org/pandas-docs/dev/io.html
+For more information on JSON and pickle and the advantages of each, follow this link: http://pymotw.com/2/json/    
+For more information on pandas: http://pandas.pydata.org/pandas-docs/dev/io.html
